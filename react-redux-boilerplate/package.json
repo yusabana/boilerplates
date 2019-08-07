@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "React Boilerplate ========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusabana/react-redux-boilerplate.git"
+  },
+  "author": "Yuji Takaesu (yusabana)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusabana/react-redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/yusabana/react-redux-boilerplate#readme"
+}
