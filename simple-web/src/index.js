@@ -1,3 +1,6 @@
-const hoge = "Hello world!!!";
+import { toHoge } from "./hoge";
 
-console.log(hoge);
+const message = "Hellldね!!!!!!!";
+
+console.log(message);
+console.log(toHoge());
