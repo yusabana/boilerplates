@@ -1,6 +1,5 @@
 const path = require("path");
-// これは使わないかも
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const distPath = path.resolve(__dirname, "dist");
@@ -16,23 +15,28 @@ module.exports = {
   module: {},
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/html/index.html"),
+      template: path.resolve(__dirname, "./public/index.html"),
     }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/html/hoge.html"),
-      filename: "hoge.html",
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "public",
+          to: "./",
+          // public直下のindexはhtml-webpack-pluginでビルドするので除外
+          globOptions: { ignore: ["**/public/index.html"] },
+        },
+      ],
     }),
   ],
   devServer: {
     port: 8000,
-    host: "localhost",
+    host: "0.0.0.0",
     progress: true,
     contentBase: distPath,
     watchContentBase: true,
-    // host: "0.0.0.0",
-    // open: false,
-    // liveReload: true,
-    // hot: true,
+    hot: true,
     inline: true,
+    // liveReload: true,
+    // open: false,
   },
 };
