@@ -22,9 +22,17 @@ $ npm install --save-dev html-loader extract-loader file-loader
 https://blog.isystk.com/system_develop/frontend/webpack/194/
 
 ```
-npm install html-webpack-plugin --save-dev
+$ npm install html-webpack-plugin --save-dev
 ```
 
 ## 使い方
 
+```
+$ npx degit yusabana/boilerplates/simple-web
+```
+
 public/index.html 以外は全てコピーされる仕様なので、適当に必要なプッシュ
+
+
+
+
